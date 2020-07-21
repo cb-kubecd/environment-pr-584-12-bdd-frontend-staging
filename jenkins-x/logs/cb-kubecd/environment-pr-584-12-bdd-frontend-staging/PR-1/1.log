@@ -1,0 +1,46 @@
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-12-pw7mj-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1595332527.46608,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-12-pw7mj-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-12-pw7mj-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-12-pw7mj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-environment-pr-584-12-pw7mj-lvmnh[0m
+{"level":"info","ts":1595332534.5617309,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-584-12-bdd-frontend-staging.git @ master in path /workspace/source"}
+{"level":"warn","ts":1595332534.562095,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1595332534.6081796,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-12-pw7mj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-12-pw7mj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c410729d6a3d838b54ae6a3406946f53b15c6360,1:3e4b2f3bf55d8d48af712ef75ff89d33718b95fe
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 3e4b2f3bf55d8d48af712ef75ff89d33718b95fe: c410729d6a3d838b54ae6a3406946f53b15c6360:
+DEBUG: ran git fetch --unshallow origin 3e4b2f3bf55d8d48af712ef75ff89d33718b95fe: c410729d6a3d838b54ae6a3406946f53b15c6360: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard c410729d6a3d838b54ae6a3406946f53b15c6360
+DEBUG: ran git reset --hard c410729d6a3d838b54ae6a3406946f53b15c6360 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 3e4b2f3bf55d8d48af712ef75ff89d33718b95fe
+DEBUG: ran git merge 3e4b2f3bf55d8d48af712ef75ff89d33718b95fe in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e c410729d6a3d838b54ae6a3406946f53b15c6360..HEAD
+Merged SHA 3e4b2f3bf55d8d48af712ef75ff89d33718b95fe with commit message 'chore: Promote bdd-nh-1595331409 to version 0.0.1' into base branch master
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-12-pw7mj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
